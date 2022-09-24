@@ -1,33 +1,25 @@
 import { FC, useState } from "react";
 import Greet from "./components/Greet";
-import reactLogo from "./assets/react.svg";
+// import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Summary from "./components/Summary";
 
-const App: FC = () => {
-  const n = Math.floor(Math.random() * 10);
-  const threashold = 5;
-
-  const name = "george";
-  // const greet = (name: string) => `Hi ${name}.`;
-
-  return (
-    <>
-      {n > threashold && (
-        <p>
-          {n}は{threashold}よりも大きい値です
-        </p>
-      )}
-      {n > threashold || (
-        <p>
-          {n}は{threashold}以下の値です
-        </p>
-      )}
+const App: FC = () => (
+  <div className="App">
+    <Greet name="Patty" times={4} />
+    <Summary title="maple town" folded>
       <p>
-        {n}は{n % 2 === 0 ? "偶数" : "奇数"}です
+        some message about maple town 1 some message about maple town 1 some
+        message about maple town 1 some message about maple town 1 some message
+        about maple town 1 some message about maple town 1
       </p>
-      <Greet name={name} times={n} />
-    </>
-  );
-};
+      <p>
+        some message about maple town 2 some message about maple town 2 some
+        message about maple town 2 some message about maple town 2 some message
+        about maple town 2 some message about maple town 2
+      </p>
+    </Summary>
+  </div>
+);
 
 export default App;
