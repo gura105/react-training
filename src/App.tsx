@@ -1,8 +1,10 @@
 import { FC, useRef } from "react";
-import Greet from "./components/Greet";
-// import reactLogo from "./assets/react.svg";
-import "./App.css";
-import Summary from "./components/Summary";
+import Greet from "components/Greet";
+import "App.css";
+import Summary from "components/Summary";
+
+const title = import.meta.env.VITE_APP_TITLE;
+console.dir(import.meta.env);
 
 const App: FC = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -13,6 +15,9 @@ const App: FC = () => {
 
   return (
     <div className="App">
+      <header className="App-header">
+        <p>{title}</p>
+      </header>
       <Greet name="Patty" times={4} />
       <Summary title="maple town" folded>
         <p>
