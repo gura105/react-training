@@ -1,6 +1,6 @@
-import { FC } from "react";
+import { FC } from 'react'
 
-type Props = { name: string; times?: number };
+type Props = { name: string, times?: number }
 
 const Greet: FC<Props> = ({ name, times = 1 }) => {
   return (
@@ -9,7 +9,7 @@ const Greet: FC<Props> = ({ name, times = 1 }) => {
         <li key={i}>Hello, {name}!</li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default Greet;
+export default Greet
