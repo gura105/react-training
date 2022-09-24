@@ -1,17 +1,17 @@
-import { FC, useRef } from 'react'
-import Greet from 'components/Greet'
-import 'App.css'
-import Summary from 'components/Summary'
+import { FC, useRef } from 'react';
+import Greet from 'components/Greet';
+import 'App.css';
+import Summary from 'components/Summary';
 
-const title = import.meta.env.VITE_APP_TITLE
-console.dir(import.meta.env)
+const title = import.meta.env.VITE_APP_TITLE;
+console.dir(import.meta.env);
 
 const App: FC = () => {
-  const inputRef = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
-    inputRef.current?.focus()
-  }
+    inputRef.current?.focus();
+  };
 
   return (
     <div className="App">
@@ -49,7 +49,7 @@ const App: FC = () => {
         <input type="button" value="フォーカス" onClick={handleClick} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
