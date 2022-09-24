@@ -5,8 +5,8 @@ type Props = { name: string; times?: number };
 const Greet: FC<Props> = ({ name, times = 1 }) => {
   return (
     <ul>
-      {[...Array(times)].map(() => (
-        <li>Hello, {name}!</li>
+      {[...Array(times).keys()].map((i) => (
+        <li key={i}>Hello, {name}!</li>
       ))}
     </ul>
   );
