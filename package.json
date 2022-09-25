@@ -61,8 +61,5 @@
     "src/**/*.{html,json,gql,graphql}": [
       "prettier --write --loglevel=error"
     ]
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npm run lint"
   }
 }
