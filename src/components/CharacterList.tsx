@@ -23,10 +23,8 @@ type Props = {
 
 const CharacterList: FC<Props> = ({ school, characters }) => (
   <div>
-    <Heading size="md" as="h2">
-      {school}
-    </Heading>
-    <List my={8}>
+    <h2>{school}</h2>
+    <List>
       {characters.map((character) => (
         <ListItem key={character.id} m={6}>
           <Flex>
@@ -35,7 +33,7 @@ const CharacterList: FC<Props> = ({ school, characters }) => (
               <Text>{character.name}</Text>
               <Text as="span">grage {character.grade}</Text>
               <Text as="span" ml={2}>
-                {character.height ? character.height : '???'} cm
+                {character.height ?? '???'} cm
               </Text>
             </Box>
           </Flex>
