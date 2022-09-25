@@ -14,10 +14,13 @@
     "lint": "npm run --silent lint:style; npm run --silent lint:es",
     "lint:fix": "npm run --silent lint:style:fix; npm run --silent lint:es:fix",
     "fix": "npm run --silent format; npm run --silent lint:fix",
-    "preinstall": "npx typesync || :",
-    "prepare": "npx simple-git-hooks || :"
+    "preinstall": "npx typesync || :"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.4",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "framer-motion": "^7.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
